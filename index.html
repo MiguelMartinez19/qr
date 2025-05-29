@@ -17,9 +17,39 @@
       height: 100vh;
       text-align: center;
     }
-    img {
-      max-width: 80%;
-      height: auto;
+    .video-link {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      overflow: hidden;
+      width: 300px;
+      height: 270px;
+      clip-path: path('M 150 30 C 130 -20 50 -20 50 60 C 50 120 150 210 150 210 C 150 210 250 120 250 60 C 250 -20 170 -20 150 30 Z');
+      -webkit-clip-path: path('M 150 30 C 130 -20 50 -20 50 60 C 50 120 150 210 150 210 C 150 210 250 120 250 60 C 250 -20 170 -20 150 30 Z');
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+      background-color: white;
+    }
+    .video-link:hover {
+      transform: scale(1.05);
+    }
+    .video-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
     }
     h1 {
       color: #7038a5;
@@ -28,7 +58,11 @@
   </style>
 </head>
 <body>
-  <img src="stitch_sign.png" alt="Stitch con cartel" />
+  <a href="https://youtu.be/jXn-Fi8hxso?si=7xk8ZmMRIVpcmPp4" target="_blank" class="video-link">
+    <img src="https://img.youtube.com/vi/jXn-Fi8hxso/maxresdefault.jpg" alt="Miniatura del video de YouTube">
+    <div class="video-button">Ver video</div>
+  </a>
   <h1>Caro, eres muy linda. Nunca lo olvides 💖</h1>
+  <h1>te dedico esta canción, dale clik al corazon 💖</h1>
 </body>
 </html>
